@@ -2,7 +2,7 @@ export type Season = "spring" | "summer" | "autumn" | "winter";
 export type Weather = "sunny" | "rain" | "windy" | "cloudy" | "storm" | "snow" | "blizzard" | "clear";
 export type TimeOfDay = "morning" | "afternoon" | "evening"| "night";
 export type Rarity = "common" | "uncommon" | "rare" | "epic" | "legendary";
-export type ItemCategory = "flower" | "plant" | "crop" | "fish" | "animal" | "mushroom" | "minaral" | "special";
+export type ItemCategory = "flower" | "plant" | "crop" | "fish" | "animal" | "mushroom" | "mineral" | "special";
 export type QuestStatus = "available" | "active" | "completed";
 export interface SeasonConfig{
     id: Season;
