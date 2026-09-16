@@ -70,7 +70,7 @@ export interface SeasonalEvent {
     description: string;
     activities: string[];
     rewardXp: number;
-    LocationId: string;
+    locationId: string;
 }
 export interface InventoryEntry {
     itemId: string;
