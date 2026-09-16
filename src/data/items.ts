@@ -1,0 +1,16 @@
+import type { Item } from "../types/game";
+export const items: Item[] = [
+    { id: "wildflower", name: "Wildflower", description: "A small flower growing beside village paths.", icon: "/assets/icons/wildflower.png", category: "flower", rarity: "common", seasons: ["spring"], locations: ["forest", "farm"] },
+    { id: "herb", name: "Meadow Herb", description: " fragrant herb often used by the gardener.", icon: "/assets/icons/herb.png", category : "plant", rarity: "common", seasons: ["spring", "summer"], locations: ["forest"] },
+    { id: "berry", name: "Forest Berry", description: "A sweet berry that grows in sunny summer patches.", icon: "/assets/icons/berry.png", category: "plant", rarity: "common", seasons: ["summer", "autumn"], locations: ["forest", "lake", "market"] },
+    { id: "firefly", name: "Firefly Jar", description: "A gentle glow captured during a summer evening.", icon: "/assets/icons/firefly.png", category: "special", rarity: "rare", seasons: ["summer"], locations: ["forest"]},
+    { id: "sunflower", name: "Sunflower", description: "A bright flower that follows the summer sun.", icon: "/assets/icons/sunflower.png", category: "flower", rarity: "uncommon", seasons: ["summer"], locations: ["farm"] },
+    { id: "trout", name: "Silver Trout", description: "A quick fish found in the clear lake.", icon: "/assets/icons/trout.png", category: "fish", rarity: "uncommon", seasons: ["summer", "winter"], locations: ["lake"] },
+    { id: "mushroom", name: "Autumn Mushroom", description: "A warm-colored mushroom hiding beneath fallen leaves.", icon: "/assets/icons/mushroom.png", category: "mushroom", rarity: "common", seasons: ["autumn"], locations: ["forest"] },
+    { id: "chestnut", name: "Chestnut", description: "A nut gathered from the old forest trees.", icon: "/assets/icons/chestnut.png", category: "crop", rarity: "common", seasons: ["autumn"], locations: ["forest"] },
+    { id: "apple", name: "Valley Apple", description: "A crisp apple from the village orchards.", icon: "/assets/icons/apple.png", category: "crop", rarity: "uncommon", seasons: ["autumn"], locations: ["farm", "market"] },
+    { id: "winter-herb", name: "Winter Herb", description: "A hardy plant that survives under snow.", icon: "/assets/icons/winter-herb.png", category: "plant", rarity: "rare", seasons: ["winter"], locations: ["forest"] },
+    { id: "ice-crystal", name: "Ice Crystal", description: "A clear crystal found near frozen water.", icon: "/assets/icons/ice-crystal.png", category: "mineral", rarity: "rare", seasons: ["winter"], locations: ["lake", "mountain"] },
+    { id: "iron-ore", name: "Iron Ore", description: "Useful ore collected along the mountain trail.", icon: "/assets/icons/iron-ore.png", category: "mineral", rarity: "uncommon", seasons: ["spring", "summer", "autumn", "winter"], locations: ["workshop", "mountain"] },
+    { id: "moonflower", name: "Moon flower", description: "A rare flower that opens only after sunset.", icon: "/assets/icons/moonflower.png", category: "special", rarity: "epic", seasons: ["spring", "winter"], locations: ["shrine"] }
+];
