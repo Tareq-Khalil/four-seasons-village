@@ -1,0 +1,1 @@
+srx/vite-env.d.ts
