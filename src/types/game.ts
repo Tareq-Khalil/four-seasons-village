@@ -50,7 +50,7 @@ export interface QuestObjective {
     id: string;
     description: string;
     targetType: "collect" | "discover" | "visit";
-    tarfetId: string;
+    targetId: string;
     required: number;
 }
 export interface Quest {
