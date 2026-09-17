@@ -16,7 +16,7 @@ export async function loadRemotePlayer(
     const profileResult = await client
         .from("profiles")
         .select("*")
-        .eq("ed", userId)
+        .eq("id", userId)
         .single();
         if (profileResult.error || !profileResult.data) {
             return null;
@@ -26,7 +26,7 @@ export async function loadRemotePlayer(
             .select("*")
             .eq("user_id", userId);
     const questsResult = await client
-            .from("Player_quests")
+            .from("player_quests")
             .select("*")
             .eq("user_id", userId);
     const discoveriesResult = await client
