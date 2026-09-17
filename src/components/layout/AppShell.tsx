@@ -1,7 +1,6 @@
 import {NavLink, Outlet } from "react-router-dom";
 import {
     BookOpen,
-    Compass,
     Home,
     Map,
     ScrollText,
