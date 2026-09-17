@@ -37,7 +37,7 @@ export function VillagePage() {
                         {featured.map((location, index) => (
                             <motion.div key={location.id} initial={{ opacity:0, y: 8}} animate={{ opacity: 1, y: 0}} transition={{ delay: index * 0.06}} className="rounded-2xl bg-[#f1ede3] p-4">
                                 <div className="flex items-start justify-between">
-                                    <span className="text-2xl">{location.icon}</span>
+                                    <img src={location.icon} alt={location.name} className="h-16 w-16 rounded-xl object-cover"/>
                                     <span className="text-xs font-semibold text-[#8a928c]">{location.name}</span>
                                 </div>
                                 <p className="mt-5 font-semibold text-[#384b40]">{location.seasonalNotes[season.id] ?? location.description}</p>
