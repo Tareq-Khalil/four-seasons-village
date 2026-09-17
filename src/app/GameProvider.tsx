@@ -4,7 +4,7 @@ import { seasonData } from "../data/seasons";
 import { items } from "../data/items";
 import { locations } from "../data/locations";
 import { quests } from "../data/quests";
-import { XP_PER_LEVEL, TIME_CYCLE_MS } from "../lib/constants";
+import { TIME_CYCLE_MS } from "../lib/constants";
 import { loadPlayer, savePlayer } from "../utils/storage";
 import { getLevel } from "../utils/progression";
 import {supabase, isSupabaseConfigured } from "../lib/supabase";

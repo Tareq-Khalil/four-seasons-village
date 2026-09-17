@@ -94,7 +94,7 @@ export interface PlayerState {
 export interface GameContextValue {
     player: PlayerState;
     season: SeasonConfig;
-    TimeOfDay: TimeOfDay;
+    timeOfDay: TimeOfDay;
     weather: Weather;
     collectItem: (itemId: string, quantity: number) => void;
     visitLocation: (locationId: string) => void;
