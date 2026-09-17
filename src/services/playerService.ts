@@ -16,7 +16,7 @@ export async function loadRemotePlayer(
     const profileResult = await client
         .from("profiles")
         .select("*")
-        .eq("ed", userId)
+        .eq("id", userId)
         .single();
         if (profileResult.error || !profileResult.data) {
             return null;
