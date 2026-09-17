@@ -50,7 +50,7 @@ export interface QuestObjective {
     id: string;
     description: string;
     targetType: "collect" | "discover" | "visit";
-    tarfetId: string;
+    targetId: string;
     required: number;
 }
 export interface Quest {
@@ -61,7 +61,7 @@ export interface Quest {
     objectives: QuestObjective[];
     rewardXp: number;
     rewardCoins: number;
-    rewardItemd?: string;
+    rewardItemId?: string;
 }
 export interface SeasonalEvent {
     id: string;
@@ -69,8 +69,8 @@ export interface SeasonalEvent {
     season: Season;
     description: string;
     activities: string[];
-    rewardCP: number;
-    LocationId: string;
+    rewardXp: number;
+    locationId: string;
 }
 export interface InventoryEntry {
     itemId: string;
@@ -94,14 +94,14 @@ export interface PlayerState {
 export interface GameContextValue {
     player: PlayerState;
     season: SeasonConfig;
-    TimeOfDay: TimeOfDay;
+    timeOfDay: TimeOfDay;
     weather: Weather;
     collectItem: (itemId: string, quantity: number) => void;
     visitLocation: (locationId: string) => void;
-    starQuest: (questId: string) => void;
+    startQuest: (questId: string) => void;
     claimQuest: (questId: string) => void;
     setSeason: (seasonId: Season) => void;
-    reseemon: () => void;
+    resetDemo: () => void;
     isAuthenticated: boolean;
     signOut: () => Promise<void>;
 }
