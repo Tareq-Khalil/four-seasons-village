@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { CloudRain, Leaf, Moon, Snowflake, Sun } from "lucide-react";
+import { ArrowRight, CloudRain, Leaf, Moon, Snowflake, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGame } from "../app/GameProvider";
+import { Button } from"../components/common/Button";
 
 
 const weatherIcons = {
@@ -31,7 +32,8 @@ export function HomePage() {
                         {season.name} has arrived. {season.description} There is always something small waiting to be discovered.
                     </motion.p>
                     <div className="mt-7 flex flex-wrap items-center gap-3">
-                        <Link to="/village"></Link>
+                        <Link to="/village"><Button className="flex items-center gap-2 px-6 py-3">Enter Village<ArrowRight size={17} /></Button></Link>
+                        
                         <div className="flex items-center gap-2 rounded-2xl bg-white/55 px-4 py-3 text-sm font-semibold text-[#3d5548]">
                             <WeatherIcon size={17} /> {weather} · {timeOfDay}
                         </div>
