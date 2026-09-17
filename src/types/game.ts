@@ -50,7 +50,7 @@ export interface QuestObjective {
     id: string;
     description: string;
     targetType: "collect" | "discover" | "visit";
-    tarfetId: string;
+    targetId: string;
     required: number;
 }
 export interface Quest {
@@ -69,8 +69,8 @@ export interface SeasonalEvent {
     season: Season;
     description: string;
     activities: string[];
-    rewardCP: number;
-    LocationId: string;
+    rewardXp: number;
+    locationId: string;
 }
 export interface InventoryEntry {
     itemId: string;
