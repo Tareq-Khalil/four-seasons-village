@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CloudRain, Leaf, Moon, Snowflake, Sun } from "lucide-react";
+import { CloudRain, Leaf, Moon, Snowflake, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGame } from "../app/GameProvider";
 

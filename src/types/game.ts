@@ -98,10 +98,10 @@ export interface GameContextValue {
     weather: Weather;
     collectItem: (itemId: string, quantity: number) => void;
     visitLocation: (locationId: string) => void;
-    starQuest: (questId: string) => void;
+    startQuest: (questId: string) => void;
     claimQuest: (questId: string) => void;
     setSeason: (seasonId: Season) => void;
-    reseemon: () => void;
+    resetDemo: () => void;
     isAuthenticated: boolean;
     signOut: () => Promise<void>;
 }
