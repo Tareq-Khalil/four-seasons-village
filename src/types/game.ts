@@ -61,7 +61,7 @@ export interface Quest {
     objectives: QuestObjective[];
     rewardXp: number;
     rewardCoins: number;
-    rewardItemd?: string;
+    rewardItemId?: string;
 }
 export interface SeasonalEvent {
     id: string;
