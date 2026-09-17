@@ -33,7 +33,7 @@ export function HomePage() {
                     </motion.p>
                     <div className="mt-7 flex flex-wrap items-center gap-3">
                         <Link to="/village"><Button className="flex items-center gap-2 px-6 py-3">Enter Village<ArrowRight size={17} /></Button></Link>
-                        
+
                         <div className="flex items-center gap-2 rounded-2xl bg-white/55 px-4 py-3 text-sm font-semibold text-[#3d5548]">
                             <WeatherIcon size={17} /> {weather} · {timeOfDay}
                         </div>
@@ -42,5 +42,6 @@ export function HomePage() {
             </div>
             <div className= "absolute bottom-7 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-widest text-white/75">SPRING · SUMMER · AUTUMN · WINTER</div>
         </main>
+        
     );
 }
