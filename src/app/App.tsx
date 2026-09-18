@@ -3,6 +3,7 @@ import { AppShell } from "../components/layout/AppShell"
 import { HomePage } from "../pages/HomePage";
 import { VillagePage } from "../pages/VillagePage";
 import { JournalPage} from "../pages/JournalPage";
+import { InventoryPage } from "../pages/InventoryPage";
 import { ProfilePage} from "../pages/ProfilePage";
 import { MapPage } from "../pages/MapPage";
 import { LoginPage } from "../pages/LoginPage";
@@ -24,6 +25,7 @@ export function App() {
       <Route element={<AppShell />}>
         <Route path="/village" element={<ProtectedRoute><VillagePage /></ProtectedRoute>} />
         <Route path="/map" element={<ProtectedRoute><MapPage/></ProtectedRoute>}/>
+        <Route path="/inventory" element={<ProtectedRoute><InventoryPage/></ProtectedRoute>}/>
         <Route path="/journal" element={<ProtectedRoute><JournalPage/></ProtectedRoute>}/>
         <Route path="/profile" element={<ProtectedRoute><ProfilePage/></ProtectedRoute>}/>
         <Route path="/admin" element={<ProtectedRoute><AdminPage/></ProtectedRoute>} />
