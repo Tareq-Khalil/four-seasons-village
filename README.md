@@ -89,3 +89,9 @@ We used Supabase as our database and for Authentication(We also made the data sa
     <img src="public/assets/screenshots/supabase.png">
 </p>
 
+---
+## Techs used
+
+- Vite
+- Tailwind
+- Supabase
