@@ -13,7 +13,7 @@ export function App() {
       <Route path="/" element={<HomePage />}/>
       <Route element={<AppShell/>}>
         <Route path="/village" element={<VillagePage />} />
-        <Route path="/jounal" element={<JournalPage/>}/>
+        <Route path="/journal" element={<JournalPage/>}/>
         <Route path="/profile" element={<ProfilePage/>}/>
         <Route path="/admin" element={<AdminPage/>} />
         <Route path="/login" element={<LoginPage/>}/>
