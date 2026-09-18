@@ -55,7 +55,7 @@ export function InventoryPage() {
                 item && (
                   <div key={item.id} className="rounded-2xl bg-[#f1ede3] p-4">
                     <div className="flex items-start justify-between">
-                      <span className="text-3xl">{item.icon}</span>
+                      <img src={item.icon} alt={item.name} className="rounded-xl object-cover"/>
                       <span className="rounded-xl bg-white/70 px-2 py-1 text-xs font-bold text-[#6f7c73]">
                         ×{quantity}
                       </span>
