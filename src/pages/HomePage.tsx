@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CloudRain, Leaf, Moon, Snowflake, Sun } from "lucide-react";
+import { ArrowRight, CloudRain, Leaf, Moon, Snowflake, Sun, Sparkles, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useGame } from "../app/GameProvider";
-import { Button } from"../components/common/Button";
+import { Button } from "../components/common/Button";
 
 
 const weatherIcons = {
@@ -16,7 +16,7 @@ const weatherIcons = {
     clear: Moon
 };
 export function HomePage() {
-    const { season, weather, timeOfDay } = useGame();
+    const { season, weather, timeOfDay, isAuthenticated } = useGame();
     const WeatherIcon = weatherIcons[weather];
     return (
         <main className= "relative min-h-screen overflow-hidden" style={{background: `linear-gradient(180deg, ${season.palette.sky}, ${season.palette.ground} 70%, #8aa875)`}}>
@@ -32,10 +32,27 @@ export function HomePage() {
                         {season.name} has arrived. {season.description} There is always something small waiting to be discovered.
                     </motion.p>
                     <div className="mt-7 flex flex-wrap items-center gap-3">
-                        <Link to="/village"><Button className="flex items-center gap-2 px-6 py-3">Enter Village<ArrowRight size={17} /></Button></Link>
+                        <Link to={isAuthenticated ? "/village" : "/login"}><Button className="flex items-center gap-2 px-6 py-3">{isAuthenticated ? "Enter Village" : "Create your account"}<ArrowRight size={17} /></Button></Link>
 
                         <div className="flex items-center gap-2 rounded-2xl bg-white/55 px-4 py-3 text-sm font-semibold text-[#3d5548]">
                             <WeatherIcon size={17} /> {weather} · {timeOfDay}
+                        </div>
+                    </div>
+                    <div className="mt-10 grid max-w-xl gap-3 sm:grid-cols-3">
+                        <div className="rounded-2xl border border-white/40 bg-white/35 p-4 backdrop-blur-sm">
+                            <ShieldCheck size={19} className="text-[#486650]" />
+                            <p className="mt-2 text-sm font-bold text-[#304639]">Your own profile</p>
+                            <p className="mt-1 text-xs leading-5 text-[#52665a]">Your account keeps your progress connected.</p>
+                        </div>
+                        <div className="rounded-2xl border border-white/40 bg-white/35 p-4 backdrop-blur-sm">
+                            <Sparkles size={19} className="text-[#486650]" />
+                            <p className="mt-2 text-sm font-bold text-[#304639]">Discover & grow</p>
+                            <p className="mt-1 text-xs leading-5 text-[#52665a]">Explore places, collect items and earn XP.</p>
+                        </div>
+                        <div className="rounded-2xl border border-white/40 bg-white/35 p-4 backdrop-blur-sm">
+                            <Sun size={19} className="text-[#486650]" />
+                            <p className="mt-2 text-sm font-bold text-[#304639]">Four seasons</p>
+                            <p className="mt-1 text-xs leading-5 text-[#52665a]">The village changes as the seasons do.</p>
                         </div>
                     </div>
                 </div>
