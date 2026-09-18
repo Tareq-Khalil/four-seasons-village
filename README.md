@@ -41,6 +41,7 @@ Four Seasons Village is being developed by:
 
 ## Explore 
 
+After creating your account you can start exploring your village.
 ### Village
 
 <p align="center">

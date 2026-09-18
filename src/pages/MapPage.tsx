@@ -36,7 +36,7 @@ export function MapPage(){
                         const active = selectedId === location.id;
                         return (
                             <motion.button key={location.id} whileHover={{scale:1.08}} onClick={() => setSelectedId(location.id)} style={{left: `${location.x}%`, top: `${location.y}%` }} className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-2xl border px-3 py-2 text-left shadow-md transition ${active ? "z-20 border-[#304f40] bg-[#304f40] text-white" : "border-white/80 bg-white/80 text-[#3b5043]"}`}>
-                                <div className="flex items-center gap-2"><span className="text-lg">{location.icon}</span><span className="text-xs font-bold">{location.name}</span></div>
+                                <div className="flex items-center gap-2"><img src={location.icon} alt={location.name} className="h-8 w-8 rounded-lg object-cover"/><span className="text-xs font-bold">{location.name}</span></div>
                             </motion.button>
                         );
                     })}
