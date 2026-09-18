@@ -103,7 +103,7 @@ We used Supabase as our database and for Authentication(We also made the data sa
 - Vercel
 
 ---
-##Teams Work
+## Teams Work
 ### Hoshino_tls123
 
 I was the **main lead developer** of the Four Seasons Village project. I initialized the React project, created and organized the repository, established the initial project structure, and distributed the development tasks between the team members.
