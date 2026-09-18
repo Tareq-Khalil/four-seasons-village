@@ -92,6 +92,18 @@ We used Supabase as our database and for Authentication(We also made the data sa
 ---
 ## Techs used
 
+### Languages 
+
+- HTML
+- CSS
+- JS
+- SQL
+
+
+### Tools
+
 - Vite
 - Tailwind
 - Supabase
+- Vercel
+- 
