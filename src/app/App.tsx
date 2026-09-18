@@ -4,6 +4,7 @@ import { HomePage } from "../pages/HomePage";
 import { VillagePage } from "../pages/VillagePage";
 import { JournalPage} from "../pages/JournalPage";
 import { ProfilePage} from "../pages/ProfilePage";
+import { MapPage } from "../pages/MapPage";
 import { LoginPage } from "../pages/LoginPage";
 import { AdminPage } from "../pages/AdminPage";
 import { useGame } from "./GameProvider";
@@ -22,6 +23,7 @@ export function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route element={<AppShell />}>
         <Route path="/village" element={<ProtectedRoute><VillagePage /></ProtectedRoute>} />
+        <Route path="/map" element={<ProtectedRoute><MapPage/></ProtectedRoute>}/>
         <Route path="/journal" element={<ProtectedRoute><JournalPage/></ProtectedRoute>}/>
         <Route path="/profile" element={<ProtectedRoute><ProfilePage/></ProtectedRoute>}/>
         <Route path="/admin" element={<ProtectedRoute><AdminPage/></ProtectedRoute>} />
