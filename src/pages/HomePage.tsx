@@ -19,7 +19,7 @@ export function HomePage() {
     const { season, weather, timeOfDay } = useGame();
     const WeatherIcon = weatherIcons[weather];
     return (
-        <main className= "relative min-h-screen overflow-hidden" style={{background: `linear-gradient(180deg, ${season.palette.sky}, ${season.palette.ground} 70%, #8aa875)`}}>
+        <div className= "relative min-h-screen overflow-hidden" style={{background: `linear-gradient(180deg, ${season.palette.sky}, ${season.palette.ground} 70%, #8aa875)`}}>
             <div className="absolute inset-0 opacity-30" style={{background:"radial-gradient(circle at 70% 20%, white 0,transparent 35%)"}}/>
             <div className="absolute bottom-0 left-0 right-0 h-[38vh] bg-[#526f4d]/55" style={{clipPath: "polygon(0 40%, 15% 25%, 31% 42%, 45% 16%, 60% 39%, 74% 23%, 88% 42%, 100% 15%, 100% 100%, 0 100%)"}}/>
             <div className="relative mx-auto flex min-h-screen max-w-6xl items-center px-6 py-16">
@@ -41,7 +41,7 @@ export function HomePage() {
                 </div>
             </div>
             <div className= "absolute bottom-7 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-widest text-white/75">SPRING · SUMMER · AUTUMN · WINTER</div>
-        </main>
+        </div>
         
     );
 }
