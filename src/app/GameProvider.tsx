@@ -40,6 +40,7 @@ export function GameProvider({ children}: { children: React.ReactNode}) {
     const [timeTick, setTimeTick] = useState(0);
     const [weather, setWeather] = useState<Weather>(() => randomWeather(player.currentSeason));
     const [userId, setUserId] = useState<string | null>(null);
+    const [userEmail, setUserEmail] = useState<string | null>(null);
     const timeOfDay = useMemo(() => {
         const phase = Math.floor((timeTick %4));
         return ["morning", "afternoon", "evening", "night"][phase] as TimeOfDay;
@@ -55,16 +56,20 @@ export function GameProvider({ children}: { children: React.ReactNode}) {
     useEffect(() => {
         if (!isSupabaseConfigured || !supabase) return;
         supabase.auth.getSession().then(async ({data}) => {
-            const id = data.session?.user.id ?? null;
+            const user = data.session?.user ?? null;
+            const id = user?.id ?? null;
             setUserId(id);
+            setUserEmail(user?.email ?? null);
             if (id) {
                 const remote = await loadRemotePlayer(id);
                 if (remote) setPlayer(remote);
             }
         });
         const { data: listener } = supabase.auth.onAuthStateChange(async (_event, session) => {
-            const id = session?.user.id ?? null;
+            const user = session?.user ?? null;
+            const id = user?.id ?? null;
             setUserId(id);
+            setUserEmail(user?.email ?? null);
             if (id) {
                 const remote = await loadRemotePlayer(id);
                 if (remote) setPlayer(remote);
@@ -159,12 +164,14 @@ export function GameProvider({ children}: { children: React.ReactNode}) {
     const signOut = useCallback(async() => {
         if (supabase) await supabase.auth.signOut();
         setUserId(null);
+        setUserEmail(null);
     },[]);
     const value: GameContextValue = {
         player,
         season: seasonData[player.currentSeason],
         timeOfDay,
         weather,
+        userEmail,
         collectItem,
         visitLocation,
         startQuest,

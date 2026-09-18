@@ -96,6 +96,7 @@ export interface GameContextValue {
     season: SeasonConfig;
     timeOfDay: TimeOfDay;
     weather: Weather;
+    userEmail: string | null;
     collectItem: (itemId: string, quantity?: number) => void;
     visitLocation: (locationId: string) => void;
     startQuest: (questId: string) => void;
