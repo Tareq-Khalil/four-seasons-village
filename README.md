@@ -78,6 +78,7 @@ Collect items and manage them through the inventory page
     <img src="public/assets/screenshots/quests.png" alt="Quests" width="850">
 </p>
 
+Accept quests for more challenge and finish them to claim xp and coins.
 ---
 
 ## Database
