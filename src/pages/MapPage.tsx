@@ -60,7 +60,7 @@ export function MapPage(){
                     <div className="mt-4">
                         <p className="text-xs font-bold uppercase tracking-widest text-[#7c877f]">Possible finds</p>
                         <div className="mt-2 flex flex-wrap gap-2">
-                            {availableItems.length ? availableItems.map((item) => <span key={item.id} className="rounded-xl bg-[#f0e5d6] px-3 py-1.5 text-xs font-semibold text-[#6d533b]">{item.icon} {item.name}</span>) : <span className="text-sm text-[#879088]">This place has no seasonal resources.</span>}
+                            {availableItems.length ? availableItems.map((item) => <div key={item.id} className="rounded-xl bg-[#f0e5d6] px-3 py-1.5 text-xs font-semibold text-[#6d533b]"><img src={item.icon} alt={item.name} className="h-7 w-7 rounded-lg object-cover" /><span>{item.name}</span></div>) : <span className="text-sm text-[#879088]">This place has no seasonal resources.</span>}
                         </div>
                     </div>
                     <Button onClick={explore} className="mt-6 flex w-full items-center justify-center gap-2"><PackageOpen size={17} />Explore here</Button>
