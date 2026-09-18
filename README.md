@@ -90,20 +90,14 @@ We used Supabase as our database and for Authentication(We also made the data sa
 </p>
 
 ---
-## Techs used
-
-### Languages 
+## Tech used
 
 - HTML
 - CSS
 - JS
+- Typescript
 - SQL
-
-
-### Tools
-
 - Vite
 - Tailwind
 - Supabase
 - Vercel
-- 
