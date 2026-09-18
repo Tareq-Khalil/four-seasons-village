@@ -7,6 +7,7 @@ import {
     UserRound,
     Backpack,
     Shield,
+    UserPlus,
 }   from "lucide-react";
 const nav = [
     { to: "/village", label: "Village", icon: Home},
@@ -15,7 +16,8 @@ const nav = [
     { to: "/journal", label: "Journal", icon: BookOpen },
     { to: "/quests", label: "Quests", icon: ScrollText },
     { to: "/profile", label: "Profile", icon: UserRound },
-    { to: "/admin", label: "Admin", icon: Shield },
+    { to: '/login', label:"Sign up/Log in", icon: UserPlus },
+    { to: "/admin", label: "Admin", icon: Shield }
 ];
 export function Navbar() {
     return (
