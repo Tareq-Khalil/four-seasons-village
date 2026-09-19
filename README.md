@@ -145,3 +145,13 @@ I coded `src/types/database.ts` to define the database-related types and structu
 I edited `index.html` to implement the initial loading screen and made many updates to `App.tsx` throughout the development process to add functionality, integrate different parts of the website, and fix syntax and implementation errors that appeared while building the project.
 
 I also worked on connecting the different systems together and making sure the player's progress, profile, journal, and other related features worked correctly within the overall website.
+
+### slamt6390
+
+I was mainly responsible for the UI/UX design and the development of the website's pages and reusable interface components.
+
+I configured tailwind.config.ts and postcss.config.cjs and developed the main styling system in src/index.css. I also created reusable UI components, including Button.tsx, Panel.tsx, and ProgressBar.tsx, as well as the main application layout in AppShell.tsx.
+
+I coded several of the project's main pages, including HomePage.tsx, VillagePage.tsx, MapPage.tsx, InventoryPage.tsx, and QuestsPage.tsx.
+
+My work was focused on making the website visually appealing, interactive, and easy to navigate while ensuring that the different pages and UI components followed the same design and user experience.
