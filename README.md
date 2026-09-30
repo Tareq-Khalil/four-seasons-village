@@ -155,3 +155,6 @@ I configured tailwind.config.ts and postcss.config.cjs and developed the main st
 I coded several of the project's main pages, including HomePage.tsx, VillagePage.tsx, MapPage.tsx, InventoryPage.tsx, and QuestsPage.tsx.
 
 
+
+## News
+unfortunately, the project got rejected for thirdspace.hackclub.com
